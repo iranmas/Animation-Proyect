@@ -1,0 +1,62 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./images/fondo.jpg");
+  background-repeat: repeat-x;
+  background-size: 620px auto;
+  z-index: 0;
+  animation: 10s linear 0s normal none infinite fondo;
+}
+
+@keyframes fondo {
+  from {background-position: 0 0;}
+  to {background-position: -620px 0;}
+}
+
+.muro {
+  background: url("./images/muro.png");
+  height: 288px;
+  margin: auto;
+  margin-top: 300px;
+  background-repeat: repeat-x;
+  background-size: 288px auto;
+  position: relative;
+  z-index: 1;
+  animation: 3s linear 0s normal none infinite muro-madera;
+}
+
+@keyframes muro-madera {
+  from {background-position: 288px 0;}
+  to {background-position: 0 0}
+}
+
+.gatico {
+  background: url("./images/cat.png"); 0 0 no-repeat;
+  height: 200px; width: 400px;
+  position: absolute;
+  top: 190px;
+  bottom: 0.5em;
+  left: 0;
+  animation: walk 1.5s steps(12) infinite;
+}
+
+.jump{
+    
+}
+
+@keyframes walk {
+  0% {
+    left: -400px;
+    background-position: 0 0;
+  }
+  100% {
+    left: 100%;
+    background-position: 0 -2391px
+  }
+}
+
+@keyframes jump {
+  0% {background-position: 0 0;}
+  100% {background-position: 0px -200px;}
+}
